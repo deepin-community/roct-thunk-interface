@@ -1,0 +1,27 @@
+From 6c89dbb8e9a05eaded7d576f629b2a2ee9c52cce Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Torsten=20Ke=C3=9Fler?= <t.kessler@posteo.de>
+Date: Sat, 30 Sep 2023 19:14:47 +0200
+Subject: [PATCH] Mark new symbols in ROCm 5.7.0 as global
+
+Change-Id: Ia0391cac7f432f019dea94f98a145dbf8120817d
+
+Applied-Upstream: https://github.com/ROCm/ROCT-Thunk-Interface/commit/6c89dbb8e9a05eaded7d576f629b2a2ee9c52cce
+---
+ src/libhsakmt.ver | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/libhsakmt.ver b/src/libhsakmt.ver
+index 5d1a673..15c2916 100644
+--- a/src/libhsakmt.ver
++++ b/src/libhsakmt.ver
+@@ -77,6 +77,10 @@ hsaKmtSetXNACKMode;
+ hsaKmtGetXNACKMode;
+ hsaKmtOpenSMI;
+ hsaKmtExportDMABufHandle;
++hsaKmtWaitOnEvent_Ext;
++hsaKmtWaitOnMultipleEvents_Ext;
++hsaKmtReplaceAsanHeaderPage;
++hsaKmtReturnAsanHeaderPage;
+ 
+ local: *;
+ };

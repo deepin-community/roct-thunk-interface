@@ -1,5 +1,119 @@
-template-repository (1.0-1) unstable; urgency=medium
+roct-thunk-interface (5.7.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Migrate ROCm 5.7.0 to unstable.
+  * d/control: add self to uploaders
+  * d/control: update Build-Depends from pkg-config to pkgconf
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Cordell Bloor <cgmb@slerp.xyz>  Thu, 22 Feb 2024 10:38:37 -0700
+
+roct-thunk-interface (5.7.0-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+
+  * Add missing symbols: hsaKmtWaitOnEvent_Ext,
+    hsaKmtWaitOnMultipleEvents_Ext, hsaKmtReplaceAsanHeaderPage,
+    and hsaKmtReturnAsanHeaderPage.
+  * d/rules: disable upstream logic for duplicating headers
+  * Remove incorrect support information from package description
+  * Update standards version
+  * Update upstream URL
+
+ -- Cordell Bloor <cgmb@slerp.xyz>  Tue, 09 Jan 2024 02:24:11 -0700
+
+roct-thunk-interface (5.7.0-1~exp0) experimental; urgency=medium
+
+  * New upstream version 5.7.0
+  * Remove build-shlib patch in favor of cmake definition.
+  * Rebase existing patches.
+  * Refresh symbols control file.
+
+ -- Mo Zhou <lumin@debian.org>  Sat, 16 Sep 2023 20:59:49 -0400
+
+roct-thunk-interface (5.4.0-1~0exp0) experimental; urgency=medium
+
+  * New upstream version 5.4.0
+  * d/copyright: no more files excluded.
+  * d/watch: remove logic around +dfsg version.
+  * d/libhsakmt1.symbols: new symbols introduced.
+
+ -- Étienne Mollier <emollier@debian.org>  Fri, 02 Dec 2022 17:19:41 +0100
+
+roct-thunk-interface (5.2.3+dfsg-1) unstable; urgency=medium
+
+  * Migrate ROCm 5.2.3 to unstable.
+
+ -- Étienne Mollier <emollier@debian.org>  Mon, 17 Oct 2022 21:58:47 +0200
+
+roct-thunk-interface (5.2.3+dfsg-1~0exp0) experimental; urgency=medium
+
+  * New upstream version
+  * Apply multi-arch hints.
+    + libhsakmt-dev: Add Multi-Arch: same.
+
+ -- Étienne Mollier <emollier@debian.org>  Mon, 05 Sep 2022 21:58:15 +0200
+
+roct-thunk-interface (5.2.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Standards-Version: 4.6.1 (routine-update)
+  * Set upstream metadata fields.
+  * Apply multi-arch hints.
+    + libhsakmt1: Add Multi-Arch: same.
+  * d/control: add myself to uploaders.
+  * d/copyright: remove superfluous file patterns.
+  * d/copyright: refresh copyright information.
+
+ -- Étienne Mollier <emollier@debian.org>  Sun, 03 Jul 2022 12:28:43 +0200
+
+roct-thunk-interface (5.1.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 5.1.0+dfsg
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 07 Apr 2022 12:10:57 -0400
+
+roct-thunk-interface (5.0.0+dfsg-1) unstable; urgency=medium
+
+  [ Maxime Chambonnet ]
+  * New upstream version 5.0.0+dfsg
+
+  [ Mo Zhou ]
+  * Update copyright.
+
+ -- Mo Zhou <lumin@debian.org>  Sat, 12 Feb 2022 13:23:02 -0500
+
+roct-thunk-interface (4.5.2+dfsg-1) unstable; urgency=medium
+
+  [ Maxime Chambonnet ]
+  * New upstream version 4.5.2+dfsg
+  * Updated symbol file, added "Build-Depends-Package"
+  * Added libdrm-dev as build dependency
+  * Passed dpkg-buildflags hardening
+  * Spelling patch
+  * Added myself to uploaders
+
+  [ Mo Zhou ]
+  * Create libhsakmt-dev.install.in as a template for sed editing.
+
+ -- Mo Zhou <lumin@debian.org>  Fri, 14 Jan 2022 22:26:54 -0500
+
+roct-thunk-interface (3.7.0+dfsg-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * Drop unused B-D libpci-dev.
+  * Add myself to uploaders.
+
+  [ Mo Zhou ]
+  * New upstream version 3.7.0+dfsg
+  * Update the regex in watch file to reflect upstream changes.
+  * Change the maintainer mail address into debian-ai@l.d.o
+  * Update installation paths according to upstream changes.
+  * Refresh symbols control file.
+  * Remove unnecessary ${shlibs:Depends} from d/control.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 17 Sep 2020 16:46:39 +0800
+
+roct-thunk-interface (3.0.0+dfsg-1~exp1) experimental; urgency=medium
+
+  * Initial release. (Closes: #943556)
+
+ -- Mo Zhou <lumin@debian.org>  Wed, 25 Mar 2020 15:01:59 +0800

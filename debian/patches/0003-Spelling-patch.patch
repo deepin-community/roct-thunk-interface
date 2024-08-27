@@ -1,0 +1,23 @@
+Description: Will make a big spelling-patch push-forward later. 
+Forwarded: not-needed
+From: Maxime Chambonnet <maxzor@maxzor.eu>
+Date: Tue, 28 Dec 2021 06:41:56 +0100
+Subject: Spelling patch
+
+---
+ src/fmm.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: roct-thunk-interface/src/fmm.c
+===================================================================
+--- roct-thunk-interface.orig/src/fmm.c
++++ roct-thunk-interface/src/fmm.c
+@@ -2107,7 +2107,7 @@ static HSAKMT_STATUS init_mmap_apertures
+ 		 * only apply to old GPUs that don't support 48-bit
+ 		 * virtual addresses.
+ 		 */
+-		pr_info("Falling back to reserved SVM apertures due to alignment contraints.\n");
++		pr_info("Falling back to reserved SVM apertures due to alignment constraints.\n");
+ 		return HSAKMT_STATUS_ERROR;
+ 	}
+ 

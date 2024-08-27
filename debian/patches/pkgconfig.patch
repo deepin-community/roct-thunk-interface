@@ -1,0 +1,25 @@
+Description: Little relevance, opinionated,
+ won't bother with this for now.
+Forwarded: not-needed
+From: ROCm Team <debian-ai@lists.debian.org>
+Date: Sat, 18 Dec 2021 01:58:21 +0100
+Subject: fix paths
+
+---
+ libhsakmt.pc.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Index: roct-thunk-interface/libhsakmt.pc.in
+===================================================================
+--- roct-thunk-interface.orig/libhsakmt.pc.in
++++ roct-thunk-interface/libhsakmt.pc.in
+@@ -1,7 +1,7 @@
+-prefix=@CPACK_PACKAGING_INSTALL_PREFIX@
++prefix=/usr
+ exec_prefix=${prefix}
+ libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+-includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
++includedir=${prefix}/include/rocm
+ 
+ Name: libhsakmt
+ Description: HSA Kernel Mode Thunk library for AMD KFD support
